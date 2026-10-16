@@ -1,0 +1,2 @@
+import {ImageResponse} from "next/og";export const size={width:1200,height:630};export const contentType="image/png";export const alt="Montis Tech";
+export default function I(){return new ImageResponse(<div style={{width:"100%",height:"100%",background:"#1c2128",display:"flex",flexDirection:"column",justifyContent:"center",padding:80,color:"#f6f4ef"}}><div style={{fontSize:96,fontWeight:700}}>Montis Tech</div><div style={{fontSize:40,marginTop:24,color:"#6aa5e0"}}>Réparation informatique, PC sur mesure et smartphones — Val de Morteau</div></div>,size);}

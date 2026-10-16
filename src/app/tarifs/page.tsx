@@ -1,0 +1,4 @@
+import {prices} from "@/config/site";export const metadata={title:"Tarifs indicatifs",description:"Tarifs indicatifs des prestations de réparation informatique, montage PC et smartphones à Morteau."};
+export default function T(){return(<div className="space-y-4"><h1 className="text-3xl font-bold">Tarifs indicatifs</h1>
+<table className="w-full text-left"><caption className="sr-only">Tarifs indicatifs</caption><thead><tr><th className="py-2">Prestation</th><th>Prix</th></tr></thead><tbody>{prices.map(([a,b])=><tr key={a} className="border-t border-ink/10"><td className="py-2">{a}</td><td>{b}</td></tr>)}</tbody></table>
+<ul className="list-disc pl-5 text-sm"><li>Tarifs provisoires, variables selon le modèle et la complexité.</li><li>Pièces facturées séparément si non incluses.</li><li>Frais de déplacement et diagnostic éventuellement facturé : annoncés avant validation.</li><li>Aucune réparation sans votre accord sur le devis.</li></ul></div>);}

@@ -1,0 +1,2 @@
+export const metadata={title:"À propos",description:"Présentation de Montis Tech, atelier local de réparation informatique à Morteau."};
+export default function A(){return(<div className="space-y-3"><h1 className="text-3xl font-bold">À propos</h1><p>Un interlocuteur direct, des explications claires, des tarifs lisibles, et pas de remplacement inutile.</p><p className="rounded bg-ink/5 p-3 text-sm">À COMPLÉTER : présentation personnelle, photo et parcours (rien n'est inventé ici).</p></div>);}

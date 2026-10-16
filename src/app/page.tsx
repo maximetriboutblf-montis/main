@@ -1,0 +1,8 @@
+import Link from "next/link";import {site,services} from "@/config/site";
+export default function Home(){return(<div className="space-y-14">
+<section className="space-y-4 py-8"><h1 className="text-3xl font-bold md:text-5xl">Votre matériel mérite mieux qu'un remplacement systématique.</h1>
+<p className="max-w-2xl text-lg">{site.name} vous accompagne pour le dépannage informatique, le montage de PC sur mesure et la réparation de smartphones autour de Morteau. Nous expliquons la panne, les solutions possibles, et proposons un devis avant toute intervention.</p>
+<div className="flex flex-wrap gap-3"><Link className="btn" href="/contact">Demander un devis</Link><Link className="btn2" href="/tarifs">Voir les tarifs</Link></div></section>
+<section className="grid gap-4 md:grid-cols-3">{Object.entries(services).map(([k,s])=><Link key={k} href={`/services/${k}`} className="rounded-lg border border-ink/15 p-5 hover:border-steel"><h2 className="font-semibold">{s.title}</h2><p className="mt-2 text-sm">{s.intro}</p></Link>)}</section>
+<section><h2 className="text-2xl font-semibold">Comment ça se passe</h2><ol className="mt-3 list-decimal space-y-1 pl-5"><li>Vous décrivez votre besoin.</li><li>Vous venez sans rendez-vous de 16h à 20h, ou nous convenons d'un rendez-vous (aucun créneau n'est réservable en ligne).</li><li>Diagnostic expliqué, puis devis.</li><li>Intervention uniquement après votre accord.</li></ol></section>
+<section><h2 className="text-2xl font-semibold">Zone desservie</h2><p className="mt-2">{site.area}. Les déplacements sont annoncés avant validation.</p></section></div>);}
